@@ -1,15 +1,23 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& a, int k) {
-        int n=a.size();
-        for(int i=0;i<n-1;i++){
-            for(int j=i+1;j<n;j++){
-                if(a[i]+a[j]==k){
-                    return {i,j};
-                }
+       
+           int n=a.size();
+        unordered_map<int,int>mpp;
+        for(int i=0;i<n;i++){
+            int num=a[i];
+            int x=k-num;
+            if(mpp.find(x)==mpp.end()){
+                 mpp[num]=i;
+                
             }
+            else{
+                return {mpp[x],i};
+            }
+           
         }
-        return {};
+        return {-1,-1};
+        
         
     }
 };
