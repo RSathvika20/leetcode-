@@ -28,7 +28,7 @@ public:
         inOrder(node->right, k);
     }
 
-public:
+
     int kthSmallest(TreeNode* root, int k) {
         inOrder(root, k);
         return result;
