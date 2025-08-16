@@ -14,14 +14,16 @@ public:
         result.pop_back();
         k--;
     }
-    int start = 0;
-    while (start < result.size() && result[start] == '0') {
-        start++;
+    string ans = "";
+    bool leadingZero = true;
+    for (char c : result) {
+        if (leadingZero && c == '0') {
+            continue; 
+        }
+        leadingZero = false;
+        ans.push_back(c);
     }
-
-    result = result.substr(start);
-    
-    return result.empty() ? "0" : result;
+    return ans.empty() ? "0" : ans;
         
     }
 };
