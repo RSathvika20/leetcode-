@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int searchInsert(vector<int>& a, int x) {
+    int searchInsert(vector<int>&a, int x) {
         int n=a.size();
        
        int l=0;
@@ -20,6 +20,7 @@ public:
        }
     
         return ans;
+        
         
     }
 };
