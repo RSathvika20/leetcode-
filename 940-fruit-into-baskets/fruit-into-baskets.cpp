@@ -2,12 +2,7 @@ class Solution {
 public:
     int totalFruit(vector<int>& s) {
         int n=s.size();
-        if(n==1){
-            return 1;
-        }
-        if(n==2){
-            return 2;
-        }
+        
         unordered_map<int,int>freq;
         int p1=0,p2=0,ans=0;
         while(p2<n){
