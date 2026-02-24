@@ -9,7 +9,7 @@ public:
             return false;
         }
         }
-        long long int sum=0;
+        int sum=0;
         while(n>0){
             int dig=n%10;
             sum+=dig*dig;
